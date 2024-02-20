@@ -29,7 +29,7 @@ export let Navbar = () => {
                         <IconButton size="large" edge="start" color="inherit" aria-label="logo" onClick={openMenu}>
                             <MenuIcon />
                         </IconButton>
-                        <Menu open={anchorNav} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' } }}>
+                        <Menu open={anchorNav} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' }}}>
                             <MenuList>
                                 <MenuItem component={Link} to="/" onClick={closeMenu}>Home</MenuItem>
                                 <MenuItem component={Link} to="/myquizes" onClick={closeMenu}>My Quizes</MenuItem>

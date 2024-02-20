@@ -1,0 +1,10 @@
+.content-box {
+    cursor: pointer;
+    margin-right: 20px;
+    &:hover {
+        transform: scale(0.8);
+      }
+}
+.stack {
+    margin: 20px 15px;
+}
