@@ -14,7 +14,7 @@ export let Navbar = () => {
    }
     return (
         <>
-            <AppBar position="sticky">
+            <AppBar position="sticky" sx={{"@media(max-width:750px)":{width:"980px"}}}>
                 <Toolbar>
                     <IconButton size="large" edge="start" color="inherit" aria-label="logo" sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <QuizIcon />
@@ -22,7 +22,7 @@ export let Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>My Quiz App</Typography>
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <Button color="inherit" href="/">Home</Button>
-                        <Button color="inherit" href="/myquizes">My Quizes</Button>
+                        <Button color="inherit" href="/quiz">My Quizes</Button>
                         <Button color="inherit" href="/playquiz">Play Quize</Button>
                     </Box>
                     <Box sx={{ display: { xs: "flex", md: 'none' } }}>
@@ -32,7 +32,7 @@ export let Navbar = () => {
                         <Menu open={anchorNav} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' }}}>
                             <MenuList>
                                 <MenuItem component={Link} to="/" onClick={closeMenu}>Home</MenuItem>
-                                <MenuItem component={Link} to="/myquizes" onClick={closeMenu}>My Quizes</MenuItem>
+                                <MenuItem component={Link} to="/quiz" onClick={closeMenu}>My Quizes</MenuItem>
                                 <MenuItem component={Link} to="/playquiz" onClick={closeMenu}>Play Quiz</MenuItem>
                             </MenuList>
                         </Menu>
