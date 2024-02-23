@@ -1,9 +1,11 @@
 import "./MCQSingleStyle.css";
 import { useEffect, useRef, useState } from "react";
-import {Container} from "@mui/material";
+import {Button, Container} from "@mui/material";
 import {useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addQuiz } from "../../Redux/Actions/Actions";
+import ControlPointIcon from "@mui/icons-material/ControlPoint";
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 
 export let MCQSingle = ()=>{
     const titleRef = useRef();
@@ -58,10 +60,11 @@ export let MCQSingle = ()=>{
             answerRef.current.value = "";
             CorrectAnswerRef.current.checked = false;
          };
+        }
          //this func will add questions:
          const addQuestionHandler = (event)=>{
               event.preventDefault();
-              if(questionRef.current.value = ""){
+              if(questionRef.current.value === ""){
                 return alert("Enter Question!");
               }
               if(questionRef.current.value < 10){
@@ -118,16 +121,57 @@ export let MCQSingle = ()=>{
          };
          const ChangeStyle = ()=>{
             return isChecked ? {color:"green"} : {color:"black"};
-         }
-    }
+         };
     return (
-        <>
+        
          <Container>
             <div className="heading">
                 <h1>Create New Quiz</h1>
             </div>
-           
+            <div className="quizForm">
+                <form action="" onSubmit={onSaveHandler}>
+                   <div className="upper">
+                      <input type="text" placeholder="title" name="title" className="quizform-title" maxLength={30} minLength={10} ref={titleRef} required></input>
+                      <input type="text" placeholder="Add Description" className="description" required ref={descriptionRef}></input>
+                   </div>
+                   <div className="QA">
+                    <label htmlFor="question">Question {count}</label>
+                    <input type="text" className="question" maxLength={200} placeholder="Enter Your Question" ref={questionRef} required></input>
+                    {added && <p className="QA-P-G">Your Question is added!</p>}
+                    {answerDone && <p className="QA-P-R">Add at least 2 options!</p>}
+                   </div>
+                   <div className="answerSection">
+                     <input type="text" className="answer" placeholder="Enter Options" ref={answerRef} ></input>
+                      <div className="checkBox">
+                         <input type="checkbox" id="check" className="checkBox-2" checked={isChecked} onChange={handleCheckboxChange} ref={CorrectAnswerRef}></input>
+                         <p className="checkBox-p" style={ChangeStyle()}>Correct Answer</p>
+                         <Button variant="outlined" color="error" onClick={addOptionHandler} sx={{height:"40px",width:"160px",marginLeft:"15px","@media(max-width:600px)":{width:"100px",margin:"2px",padding:"2px"},":hover":{bgcolor:"rgb(206,78,78)",color:"white"}}}><ControlPointIcon sx={{height:"30px",marginRight:"8px",display: { xs: "none", sm: "block" },}}/>Add Option</Button>
+                      </div>
+                   </div>
+                   <div className="viewAnswer">
+                    {answers.map((el,i)=> {
+                        return (
+                            <div className="enter-option" key={i} style={el.correct ? {background:"#32a84e"}:{background:"#D1D1D1"}}>
+                               <p style={{overflowWrap:"break-word",width:"100px"}}>{el.answer}</p>
+                               <Button size="small" onClick={()=>deleteHandler(el.id)}><DeleteOutlineOutlinedIcon></DeleteOutlineOutlinedIcon></Button>
+                            </div>
+                        );
+                    })}
+                   </div>
+                   <div className="questionBtn">
+                    <Button variant="outlined" color="error" onClick={addQuestionHandler} sx={{":hover":{bgcolor:"rgb(206,78,78)",color:"white"}}}>
+                        {" "}
+                        <ControlPointIcon sx={{height:"30px", marginRight:"8px"}}></ControlPointIcon>
+                        Add Question
+                    </Button>
+                   </div>
+                   <hr/>
+                   <Button onClick={onSaveHandler} variant="outlined" color="error" sx={{":hover":{bgcolor:"rgb(206,78,78)",color:"white"}}}>
+                    Submit
+                   </Button>
+                </form>
+            </div>
          </Container>
-        </>
+        
     )
 }

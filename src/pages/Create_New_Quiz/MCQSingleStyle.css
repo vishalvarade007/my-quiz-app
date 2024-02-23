@@ -1,0 +1,134 @@
+.quizForm {
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    height: 100%;
+    width:70vw;
+    background-color: blanchedalmond;
+    padding: 20px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.upper {
+    display: flex;
+    flex-direction: column;
+}
+
+.quizform-title {
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid darkgray;
+}
+
+.description {
+    height: 60px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid darkgray;
+}
+label {
+    display: block;
+    padding-top: 20px;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.question {
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}
+.answerSection {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    height: 40px;
+}
+.checkBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 10px;
+}
+.checkBox-p {
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 3px;
+}
+.checBox-2 {
+    height: 18px;
+    width: 18px;
+  
+}
+.answer {
+    padding-left: 10px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}
+.viewAnswer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+.enter-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    text-align: center;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+}
+.questionBtn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+.QA-P-G {
+    color:green
+}
+.QA-P-R {
+    color:red
+}
+input {
+    background-color: cornsilk;
+}
+
+@media screen and (max-width:750px){
+    .answer {
+        width: 150px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .checkBox-p{
+        width: 120px;
+    }
+    .enter-option {
+        margin-bottom: 20px;
+        width: 150px;
+        padding-left: 5px;
+    }
+    .quizForm {
+        width: 80vw;
+    }
+    .answerSection {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+    }
+    .viewAnswer {
+        display: flex;
+        justify-content: center;
+    }
+}
+

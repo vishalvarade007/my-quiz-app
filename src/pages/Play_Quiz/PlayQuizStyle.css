@@ -1,0 +1,86 @@
+.playquiz-box {
+    background-color: blanchedalmond;
+    height: 100%;
+    width: 70vw;
+    padding: 0px 20px;
+    margin-top: 40px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.playquiz-title {
+    border: none;
+    padding: 10px 0px 0px 15px;
+}
+.playquiz-desc {
+    border: none;
+    padding: 0px 15px;
+}
+.good-luck {
+    height: 250px;
+    width: 250px;
+    background-image: url("../../components/Images/goodLuck.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+label {
+    margin: 8px 0px;
+}
+.input-name-text {
+    height: 25px;
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    border-radius: 2px;
+}
+.created-quiz {
+    width: 70vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.created-quiz p{
+    color:red;
+}
+.playquiz-option {
+    width: 200px;
+    height: 50px;
+    background-color: NavajoWhite;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 1px gray;
+}
+.playquiz-viewoption{
+    height: 100px;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width:750px){
+    .playquiz-box{
+        width: 80vw;
+        height: 90vh;
+    }
+    .playquiz-option {
+        padding: 5px;
+        width: fit-content;
+    }
+    .input-name-text {
+        width: 50vw;
+    }
+    .playquiz-viewoption {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: fit-content;
+      }
+}
