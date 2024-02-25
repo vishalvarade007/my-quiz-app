@@ -1,0 +1,50 @@
+.contain {
+    display: flex;
+    justify-content: center;
+}
+
+.quizcard-container {
+    background-color: blanchedalmond;
+    width: 45vw;
+    height: fit-content;
+    margin-top: 40px;
+    padding-left: 40px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+}
+.quizcard-title {
+    padding-top: 1px;
+}
+.quizcard-title h1 {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+    margin-right: 40px;
+    background-color: cornsilk;
+    padding: 5px;
+    color:darkred
+}
+.next-question {
+    padding-bottom: 10px;
+}
+.quizcard-option {
+    height: 40px;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px gray;
+    cursor: pointer;
+}
+@media screen and (max-width:600px){
+    .quizcard-container {
+        width: 80vw;
+        height: fit-content;
+    }
+    .quizcard-option {
+        width: 70vw;
+    }
+}
