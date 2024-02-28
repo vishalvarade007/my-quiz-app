@@ -42,7 +42,7 @@ export let PlayQuizCard = ()=>{
         };
         setFinalanswer(Answer);
     };
-
+   
     return (
         <>
           <Container>
@@ -60,7 +60,7 @@ export let PlayQuizCard = ()=>{
                             <div>
                                 {answers.map((el,i)=>(
                                     <div className="quizcard-option" onClick={()=>onclickHandler(el)}
-                                     style={{background:`${finalAnswer.id === el.id ? "green":"cornsilk"}`,}}
+                                     style={{background:`${finalAnswer.id === el.id ? "lightgreen":"cornsilk"}`,}}
                                      key={i}
                                     >
                                      <p>{el.answer}</p>
@@ -74,14 +74,23 @@ export let PlayQuizCard = ()=>{
                                     </h3>
                                 </div>
                                 <div className="next-question">
-                                    {disable ? (
+                                    {disable ? (count + 1 === quiz.length ?
+                                        (<Button variant="outlined" color="error" sx={{":hover":{bgcolor:"rgb(206,78,78)", color:"white"}}}>
+                                            Submit
+                                        </Button>):(
                                         <Button variant="outlined" color="error" sx={{":hover":{bgcolor:"rgb(206,78,78)", color:"white"}}}>
                                             Next Question
                                         </Button>
+                                        )
                                     ):(
+                                        count + 1 === quiz.length ?
+                                        (<Button variant="outlined" color="error" sx={{":hover":{bgcolor:"rgb(206,78,78)", color:"white"}}} onClick={nextQuestionHandler}>
+                                            Submit
+                                        </Button>):(
                                         <Button variant="outlined" color="error" sx={{":hover":{bgcolor:"rgb(206,78,78)", color:"white"}}} onClick={nextQuestionHandler}>
                                             Next Question
                                         </Button>
+                                        )
                                     )}
                                 </div>
                             </div>

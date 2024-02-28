@@ -1,0 +1,68 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tablehead {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+.table {
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+}
+.table-sno {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+    width:70vw;
+}
+.Title {
+    text-align: right;
+    overflow-wrap: break-word;
+    width: 10vw;
+}
+.deletemodal {
+    width: 400px;
+    height: 110px;
+    background-color: blanchedalmond;
+    padding: 2px 0px 15px 15px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px darkgray;
+}
+.deleteouter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50vh;
+}
+@media screen and (max-width:750px){
+    .table-sno {
+        width: 300px;
+        margin: 10px;
+      }
+      .deletemodal {
+        width: 400px;
+        height: fit-content;
+      }
+      .active {
+        visibility: hidden;
+      }
+    
+      .Title {
+        text-align: center;
+        width: 22vw;
+      }
+      .switch {
+        width: 50px;
+        height: 70px;
+      }
+      .deleteBtn {
+        padding: 0px;
+      }
+}

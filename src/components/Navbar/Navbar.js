@@ -2,7 +2,16 @@ import React,{useState} from "react";
 import { AppBar, Toolbar, IconButton, Typography, Box,Button, Menu, MenuList, MenuItem } from "@mui/material";
 import QuizIcon from '@mui/icons-material/Quiz';
 import MenuIcon from '@mui/icons-material/Menu';
+import {createTheme,ThemeProvider} from "@mui/material/styles";
 import { Link } from "react-router-dom";
+
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#8365b7',
+      },
+    },
+  });
 
 export let Navbar = () => {
     const [anchorNav,setanchorNav] = useState(false);
@@ -13,8 +22,9 @@ export let Navbar = () => {
         setanchorNav(!anchorNav);
    }
     return (
-        <>
-            <AppBar position="sticky" sx={{"@media(max-width:750px)":{width:"980px"}}}>
+        <> 
+        <ThemeProvider theme={theme}>
+            <AppBar position="sticky" >
                 <Toolbar>
                     <IconButton size="large" edge="start" color="inherit" aria-label="logo" sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <QuizIcon />
@@ -31,9 +41,9 @@ export let Navbar = () => {
                         </IconButton>
                         <Menu open={anchorNav} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' }}}>
                             <MenuList>
-                                <MenuItem component={Link} to="/" onClick={closeMenu}>Home</MenuItem>
-                                <MenuItem component={Link} to="/quiz" onClick={closeMenu}>My Quizes</MenuItem>
-                                <MenuItem component={Link} to="/playquiz" onClick={closeMenu}>Play Quiz</MenuItem>
+                                <MenuItem component={Link} to="/" onClick={closeMenu} style={{color:"darkred"}}>Home</MenuItem>
+                                <MenuItem component={Link} to="/quiz" onClick={closeMenu} style={{color:"darkcyan"}}>My Quizes</MenuItem>
+                                <MenuItem component={Link} to="/playquiz" onClick={closeMenu} style={{color:"green"}}>Play Quiz</MenuItem>
                             </MenuList>
                         </Menu>
                         <IconButton size="large" edge="start" color="inherit" aria-label="logo" sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -43,6 +53,7 @@ export let Navbar = () => {
                     </Box>
                 </Toolbar>
             </AppBar>
+            </ThemeProvider>
         </>
     )
 }

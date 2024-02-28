@@ -30,7 +30,7 @@ export const playQuiz = (id)=>{
 
 export const getName = (name)=>{
     return {
-        type:ActionType.ADDQUIZ,
+        type:ActionType.GETNAME,
         payload:name,
     };
 };

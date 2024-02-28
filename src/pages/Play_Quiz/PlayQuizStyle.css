@@ -4,7 +4,11 @@
     width: 70vw;
     padding: 0px 20px;
     margin-top: 40px;
+    margin-bottom: 40px;
     box-shadow: 1px 1px 1px 1px gray;
+}
+body{
+    background-color: #dbf3fa;
 }
 .playquiz-title {
     border: none;
@@ -45,7 +49,7 @@ label {
 .playquiz-option {
     width: 200px;
     height: 50px;
-    background-color: NavajoWhite;
+    background-color: rgb(210, 255, 173);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -70,7 +74,8 @@ label {
     }
     .playquiz-option {
         padding: 5px;
-        width: fit-content;
+        width: 140px;
+        height: 40px;
     }
     .input-name-text {
         width: 50vw;

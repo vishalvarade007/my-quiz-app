@@ -145,7 +145,7 @@ export let MCQSingle = ()=>{
                       <div className="checkBox">
                          <input type="checkbox" id="check" className="checkBox-2" checked={isChecked} onChange={handleCheckboxChange} ref={CorrectAnswerRef}></input>
                          <p className="checkBox-p" style={ChangeStyle()}>Correct Answer</p>
-                         <Button variant="outlined" color="error" onClick={addOptionHandler} sx={{height:"40px",width:"160px",marginLeft:"15px","@media(max-width:600px)":{width:"100px",margin:"2px",padding:"2px"},":hover":{bgcolor:"rgb(206,78,78)",color:"white"}}}><ControlPointIcon sx={{height:"30px",marginRight:"8px",display: { xs: "none", sm: "block" },}}/>Add Option</Button>
+                         <Button variant="outlined" color="inherit" onClick={addOptionHandler} sx={{height:"40px",width:"160px",marginLeft:"15px","@media(max-width:600px)":{width:"100px",margin:"2px",padding:"2px"},":hover":{bgcolor:"rgb(206,78,78)",color:"white"}}}><ControlPointIcon sx={{height:"30px",marginRight:"8px",display: { xs: "none", sm: "block" },}}/>Add Option</Button>
                       </div>
                    </div>
                    <div className="viewAnswer">
@@ -159,14 +159,14 @@ export let MCQSingle = ()=>{
                     })}
                    </div>
                    <div className="questionBtn">
-                    <Button variant="outlined" color="error" onClick={addQuestionHandler} sx={{":hover":{bgcolor:"rgb(206,78,78)",color:"white"}}}>
+                    <Button variant="outlined" color="inherit" onClick={addQuestionHandler} sx={{":hover":{bgcolor:"rgb(206,78,78)",color:"white"}}}>
                         {" "}
                         <ControlPointIcon sx={{height:"30px", marginRight:"8px"}}></ControlPointIcon>
                         Add Question
                     </Button>
                    </div>
                    <hr/>
-                   <Button onClick={onSaveHandler} variant="outlined" color="error" sx={{":hover":{bgcolor:"rgb(206,78,78)",color:"white"}}}>
+                   <Button onClick={onSaveHandler} variant="outlined" color="inherit" sx={{":hover":{bgcolor:"rgb(206,78,78)",color:"white"}}}>
                     Submit
                    </Button>
                 </form>

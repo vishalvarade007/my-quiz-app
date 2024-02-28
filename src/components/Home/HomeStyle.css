@@ -27,3 +27,15 @@
       width: 80vw;
     }
   }
+
+@media screen and (max-width:600px) {
+      .stack {
+        flex-direction: column !important;
+      }
+      .content-box {
+        margin-bottom: 10px;
+      }
+      body{
+        width: 100vw;
+      }
+}  

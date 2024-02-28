@@ -24,6 +24,7 @@ export let PlayQuiz = ()=>{
             navigate("/quizcard");
         }
     };
+   
     return (
         <>
         <Container>

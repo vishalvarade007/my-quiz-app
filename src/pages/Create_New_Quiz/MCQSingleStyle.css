@@ -4,7 +4,7 @@
     border-radius: 10px;
     height: 100%;
     width:70vw;
-    background-color: blanchedalmond;
+    background-color:rgb(255, 223, 244);
     padding: 20px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.8);
 }
@@ -99,7 +99,7 @@ label {
     color:red
 }
 input {
-    background-color: cornsilk;
+    background-color:rgb(250, 250, 245);
 }
 
 @media screen and (max-width:750px){

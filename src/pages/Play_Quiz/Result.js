@@ -28,7 +28,7 @@ export let Result = (props)=>{
         dispatch(resetQuiz());
         navigate("/");
     }
-    console.log("props-name:",props);
+    
     return (
         <>
          <div className="result-container">
