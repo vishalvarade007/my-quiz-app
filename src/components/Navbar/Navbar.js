@@ -31,9 +31,9 @@ export let Navbar = () => {
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>My Quiz App</Typography>
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <Button color="inherit" href="/">Home</Button>
-                        <Button color="inherit" href="/quiz">My Quizes</Button>
-                        <Button color="inherit" href="/playquiz">Play Quize</Button>
+                        <Button component={Link} color="inherit" to="/">Home</Button>
+                        <Button component={Link} color="inherit" to="/quiz">My Quizes</Button>
+                        <Button component={Link} color="inherit" to="/playquiz">Play Quize</Button>
                     </Box>
                     <Box sx={{ display: { xs: "flex", md: 'none' } }}>
                         <IconButton size="large" edge="start" color="inherit" aria-label="logo" onClick={openMenu}>
